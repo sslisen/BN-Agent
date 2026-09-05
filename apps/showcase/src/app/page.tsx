@@ -18,7 +18,7 @@ const mcpSteps = [
   {
     n: "1",
     title: "Add the endpoint",
-    body: "Point your client at https://agent.binance.com/mcp/agentic (Claude Code, Codex, VS Code, or Grok Bot).",
+    body: "Point your client at https://agent.binance.com/mcp/agentic (Claude, Cursor, Codex, Grok Bot; VS Code OK). Remote HTTP MCP + OAuth — not stdio.",
   },
   {
     n: "2",
@@ -70,6 +70,9 @@ export default function Home() {
           Research → Risk → Exec (user confirm) → Positions. Not a full trading app — a
           skill-driven desk that keeps humans in the loop on every place, cancel, and
           transfer.
+        </p>
+        <p className="mt-2 max-w-2xl text-sm text-desk-muted/80">
+          研究 → 风控 → 确认后执行 → 持仓 · 人在回路，非完整交易所界面
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a
@@ -151,14 +154,18 @@ export default function Home() {
 
       <section className="relative z-10 mx-auto max-w-6xl px-6 pb-24">
         <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">Demo video</h2>
-        <p className="mt-2 text-sm text-desk-muted">Placeholder for the 6-beat confirm-flow recording.</p>
+        <p className="mt-2 text-sm text-desk-muted">
+          Placeholder for the 6-beat confirm-flow recording — follow{" "}
+          <span className="font-mono text-desk-gold/90">docs/demo-script.md</span> (Connect →
+          Research → Risk → Confirm place → Positions → Confirm cancel/exit).
+        </p>
         <div className="mt-6 flex aspect-video items-center justify-center rounded-2xl border border-desk-border bg-gradient-to-br from-desk-panel to-black shadow-glow">
           <div className="text-center">
             <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full border border-desk-gold/40 bg-desk-gold/10">
               <span className="ml-1 text-2xl text-desk-gold">▶</span>
             </div>
             <p className="text-sm font-medium">Demo coming soon</p>
-            <p className="mt-1 font-mono text-xs text-desk-muted">docs/demo-script.md</p>
+            <p className="mt-1 font-mono text-xs text-desk-muted">docs/demo-script.md · 6 beats</p>
           </div>
         </div>
         <ol className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">

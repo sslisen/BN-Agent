@@ -45,11 +45,18 @@ Skills live in [`skills/`](./skills/): `research.md` · `risk.md` · `exec.md` �
 
 ## Connect MCP / 连接 MCP
 
+Remote **Streamable HTTP / HTTP MCP** at `https://agent.binance.com/mcp/agentic` (OAuth; not stdio; not API keys).  
+Official docs: [Binance Agent Native · MCP Server](https://developers.binance.com/en/docs/agent-native/mcp-server)
+
 See [`docs/mcp-setup.md`](./docs/mcp-setup.md) or run `./scripts/print-mcp-install.sh`.
 
 ```bash
 # Claude Code
 claude mcp add --transport http binance-agentic https://agent.binance.com/mcp/agentic
+
+# Cursor — .cursor/mcp.json (or ~/.cursor/mcp.json):
+# { "mcpServers": { "binance-agentic": { "url": "https://agent.binance.com/mcp/agentic" } } }
+# then reload + OAuth
 
 # Codex
 codex mcp add binance-agentic --url https://agent.binance.com/mcp/agentic
