@@ -2,9 +2,12 @@
 
 **Endpoint (only):** `https://agent.binance.com/mcp/agentic`
 
+- Transport: **remote Streamable HTTP / HTTP MCP** (not local stdio; not API keys)
 - OAuth sign-in (no local API keys)
 - Agentic sub-account (no external withdrawals)
 - Confirm every trade / cancel / transfer
+
+Official docs: [Binance Agent Native · MCP Server](https://developers.binance.com/en/docs/agent-native/mcp-server)
 
 ## One-liners
 
@@ -12,6 +15,19 @@
 ```bash
 claude mcp add --transport http binance-agentic https://agent.binance.com/mcp/agentic
 ```
+
+### Cursor
+Add to `.cursor/mcp.json` (project) or `~/.cursor/mcp.json` (global):
+```json
+{
+  "mcpServers": {
+    "binance-agentic": {
+      "url": "https://agent.binance.com/mcp/agentic"
+    }
+  }
+}
+```
+Reload Cursor, then complete OAuth when prompted. Remote HTTP MCP — no stdio command, no API keys.
 
 ### Codex
 ```bash
