@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-desk-bg text-white antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(240, 185, 11, 0.12), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(14, 203, 129, 0.06), transparent);
+  min-height: 100vh;
+}
+
+.grid-fade {
+  background-size: 48px 48px;
+  background-image:
+    linear-gradient(to right, rgba(28, 42, 68, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(28, 42, 68, 0.35) 1px, transparent 1px);
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
